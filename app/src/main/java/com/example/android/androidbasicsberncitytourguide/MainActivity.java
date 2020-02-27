@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         // set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-//        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-//
-//        DemoCollectionPagerAdapter adapter = new DemoCollectionPagerAdapter(
-//                getSupportFragmentManager());
-//
-//        viewPager.setAdapter(adapter);
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        DemoCollectionPagerAdapter adapter = new DemoCollectionPagerAdapter(
+                getSupportFragmentManager());
+
+        viewPager.setAdapter(adapter);
 //
 //        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 //
