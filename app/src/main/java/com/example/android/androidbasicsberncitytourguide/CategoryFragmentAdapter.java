@@ -19,11 +19,11 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if(position == 0) {
-            return new DemoFragmentOne();
+            return new CityFragment();
         } else if(position == 1) {
-            return new DemoFragmentTwo();
+            return new RestaurantFragment();
         } else {
-            return new DemoFragmentThree();
+            return new ClubbingFragment();
         }
     }
 

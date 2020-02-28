@@ -1,6 +1,5 @@
 package com.example.android.androidbasicsberncitytourguide;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,16 +13,16 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link DemoFragmentOne.OnFragmentInteractionListener} interface
+ * {@link CityFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link DemoFragmentOne#newInstance} factory method to
+ * Use the {@link CityFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DemoFragmentOne extends Fragment {
+public class CityFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public DemoFragmentOne() {
+    public CityFragment() {
         // Required empty public constructor
     }
 
@@ -33,11 +32,11 @@ public class DemoFragmentOne extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DemoFragmentOne.
+     * @return A new instance of fragment CityFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DemoFragmentOne newInstance(String param1, String param2) {
-        DemoFragmentOne fragment = new DemoFragmentOne();
+    public static CityFragment newInstance(String param1, String param2) {
+        CityFragment fragment = new CityFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -52,7 +51,7 @@ public class DemoFragmentOne extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_demo_fragment_one, container, false);
+        return inflater.inflate(R.layout.fragment_city, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

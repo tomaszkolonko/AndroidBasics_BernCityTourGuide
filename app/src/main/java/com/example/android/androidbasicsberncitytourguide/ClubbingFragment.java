@@ -18,12 +18,12 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link DemoFragmentThree.OnFragmentInteractionListener} interface
+ * {@link ClubbingFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link DemoFragmentThree#newInstance} factory method to
+ * Use the {@link ClubbingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DemoFragmentThree extends Fragment {
+public class ClubbingFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
@@ -74,7 +74,7 @@ public class DemoFragmentThree extends Fragment {
         }
     };
 
-    public DemoFragmentThree() {
+    public ClubbingFragment() {
         // Required empty public constructor
     }
 
@@ -84,11 +84,11 @@ public class DemoFragmentThree extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DemoFragmentThree.
+     * @return A new instance of fragment ClubbingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DemoFragmentThree newInstance(String param1, String param2) {
-        DemoFragmentThree fragment = new DemoFragmentThree();
+    public static ClubbingFragment newInstance(String param1, String param2) {
+        ClubbingFragment fragment = new ClubbingFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -103,7 +103,7 @@ public class DemoFragmentThree extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_demo_fragment_three, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_clubbing, container, false);
 
         // Create and setup the AudioManager to request audio focus
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -118,29 +118,7 @@ public class DemoFragmentThree extends Fragment {
                 // release MediaPlayer resources BEFORE the MediaPlayer is initialized
                 releaseMediaPlayer();
 
-                // Request audio focus so in order to play the audio file. The app needs to play a
-                // short audio file, so we will request audio focus with a short amount of time
-                // with AUDIOFOCUS_GAIN_TRANSIENT.
-                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                        // use the music stream
-                        AudioManager.STREAM_MUSIC,
-                        // request permanent focus
-                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    // We have the audio focus
-
-                    // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.kapitel_sound_sample);
-
-                    // Start the audio file
-                    mMediaPlayer.start();
-
-                    // Setup a listener on the media player, so that we can stop and release the
-                    // media player once the sound has finished playing.
-                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
-                }
+                playMediaPlayer(R.raw.kapitel_sound_sample);
             }
         });
 
@@ -150,29 +128,7 @@ public class DemoFragmentThree extends Fragment {
                 // release MediaPlayer resources BEFORE the MediaPlayer is initialized
                 releaseMediaPlayer();
 
-                // Request audio focus so in order to play the audio file. The app needs to play a
-                // short audio file, so we will request audio focus with a short amount of time
-                // with AUDIOFOCUS_GAIN_TRANSIENT.
-                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                        // use the music stream
-                        AudioManager.STREAM_MUSIC,
-                        // request permanent focus
-                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    // We have the audio focus
-
-                    // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.leciel_sound_sample);
-
-                    // Start the audio file
-                    mMediaPlayer.start();
-
-                    // Setup a listener on the media player, so that we can stop and release the
-                    // media player once the sound has finished playing.
-                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
-                }
+                playMediaPlayer(R.raw.leciel_sound_sample);
             }
         });
 
@@ -182,33 +138,43 @@ public class DemoFragmentThree extends Fragment {
                 // release MediaPlayer resources BEFORE the MediaPlayer is initialized
                 releaseMediaPlayer();
 
-                // Request audio focus so in order to play the audio file. The app needs to play a
-                // short audio file, so we will request audio focus with a short amount of time
-                // with AUDIOFOCUS_GAIN_TRANSIENT.
-                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                        // use the music stream
-                        AudioManager.STREAM_MUSIC,
-                        // request permanent focus
-                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    // We have the audio focus
-
-                    // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.dutheatre_sound_sample);
-
-                    // Start the audio file
-                    mMediaPlayer.start();
-
-                    // Setup a listener on the media player, so that we can stop and release the
-                    // media player once the sound has finished playing.
-                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
-                }
+                playMediaPlayer(R.raw.dutheatre_sound_sample);
             }
         });
 
         return rootView;
+    }
+
+    /**
+     * This method plays the passed in ressource and is also responsible to
+     * set the onCompletionListener on the global MediaPlayer object.
+     *
+     * @param resource
+     */
+    private void playMediaPlayer(int resource) {
+        // Request audio focus so in order to play the audio file. The app needs to play a
+        // short audio file, so we will request audio focus with a short amount of time
+        // with AUDIOFOCUS_GAIN_TRANSIENT.
+        int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
+                // use the music stream
+                AudioManager.STREAM_MUSIC,
+                // request permanent focus
+                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            // We have the audio focus
+
+            // Create and setup the {@link MediaPlayer} for the audio resource associated
+            // with the current word
+            mMediaPlayer = MediaPlayer.create(getActivity(), resource);
+
+            // Start the audio file
+            mMediaPlayer.start();
+
+            // Setup a listener on the media player, so that we can stop and release the
+            // media player once the sound has finished playing.
+            mMediaPlayer.setOnCompletionListener(mCompletionListener);
+        }
     }
 
     /**

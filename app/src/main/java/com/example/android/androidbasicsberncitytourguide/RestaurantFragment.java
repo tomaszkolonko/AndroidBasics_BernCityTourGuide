@@ -1,6 +1,5 @@
 package com.example.android.androidbasicsberncitytourguide;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,16 +13,16 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link DemoFragmentTwo.OnFragmentInteractionListener} interface
+ * {@link RestaurantFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link DemoFragmentTwo#newInstance} factory method to
+ * Use the {@link RestaurantFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DemoFragmentTwo extends Fragment {
+public class RestaurantFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public DemoFragmentTwo() {
+    public RestaurantFragment() {
         // Required empty public constructor
     }
 
@@ -33,11 +32,11 @@ public class DemoFragmentTwo extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DemoFragmentTwo.
+     * @return A new instance of fragment RestaurantFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DemoFragmentTwo newInstance(String param1, String param2) {
-        DemoFragmentTwo fragment = new DemoFragmentTwo();
+    public static RestaurantFragment newInstance(String param1, String param2) {
+        RestaurantFragment fragment = new RestaurantFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -46,13 +45,14 @@ public class DemoFragmentTwo extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // setContentView(R.layout.fragment_restaurant);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_demo_fragment_two, container, false);
+        return inflater.inflate(R.layout.fragment_restaurant, container, false);
     }
 
     /**
