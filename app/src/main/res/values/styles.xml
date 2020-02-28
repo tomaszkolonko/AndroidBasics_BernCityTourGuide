@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- TextView General Style - Padding on all sides -->
+    <style name="GeneralTextViewBoxAllPadding" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_standard</item>
+        <item name="android:paddingLeft">@dimen/padding_standard</item>
+        <item name="android:paddingRight">@dimen/padding_standard</item>
+    </style>
+
+    <style name="SeperatorWithPadding" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_extra</item>
+        <item name="android:layout_marginBottom">@dimen/padding_extra</item>
+        <item name="android:layout_marginLeft">@dimen/padding_standard</item>
+        <item name="android:layout_marginRight">@dimen/padding_standard</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
 </resources>

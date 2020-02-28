@@ -11,59 +11,67 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/sbb_main"
+            android:id="@+id/image_bern_city_banner"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
             android:src="@drawable/switzerland_bern_banner" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="Some nice intro about the old city of Bern" />
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/intro_bern" />
 
         <TextView
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/intro_culture" />
+
+        <ImageView
+            android:id="@+id/image_kindlifresserbrunnen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="300dp"
+            android:paddingTop="@dimen/padding_standard"
+            android:scaleType="centerInside"
+            android:src="@drawable/kindlifresserbrunnen_small" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/kindlifresser_one" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/kindlifresser_two" />
 
         <TextView
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/baeren_intro" />
+
+        <ImageView
+            android:id="@+id/baerenpark"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="300dp"
+            android:paddingTop="@dimen/padding_standard"
+            android:scaleType="centerInside"
+            android:src="@drawable/baerenpark" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/baeren_one" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/baeren_two" />
 
         <TextView
+            style="@style/GeneralTextViewBoxAllPadding"
+            android:text="@string/baeren_three" />
+
+        <ImageView
+            android:id="@+id/baeren"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="300dp"
+            android:paddingTop="@dimen/padding_standard"
+            android:scaleType="centerInside"
+            android:src="@drawable/baeren" />
+
     </LinearLayout>
-
 </ScrollView>
