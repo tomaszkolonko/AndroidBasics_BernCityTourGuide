@@ -1,9 +1,11 @@
 package com.example.android.androidbasicsberncitytourguide;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,12 +31,16 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
 
         public TextView restaurantNameView;
         public TextView restaurantAddressView;
+        public TextView restaurantPhone;
+        public ImageView restaurantImageSource;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             restaurantNameView = itemView.findViewById(R.id.restaurant_name);
             restaurantAddressView = itemView.findViewById(R.id.restaurant_address);
+            restaurantPhone = itemView.findViewById(R.id.restaurant_phone);
+            restaurantImageSource = itemView.findViewById(R.id.restaurant_image);
         }
     }
 
@@ -64,6 +70,12 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
 
         TextView restaurantAddressView = viewHolder.restaurantAddressView;
         restaurantAddressView.setText(restaurant.getAddress());
+
+        TextView restaurantPhone = viewHolder.restaurantPhone;
+        restaurantPhone.setText(restaurant.getPhone());
+
+        ImageView image = (ImageView) viewHolder.restaurantImageSource;
+        image.setImageResource(restaurant.getImageResource());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
