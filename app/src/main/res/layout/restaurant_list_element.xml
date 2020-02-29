@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/restaurant_list_element"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/padding_standard"
+    android:layout_height="88dp"
     android:background="@color/category_colors"
     android:orientation="horizontal">
 
@@ -16,7 +16,7 @@
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/miwok_word"
+            android:id="@+id/restaurant_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -27,14 +27,14 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/default_word"
+            android:id="@+id/restaurant_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="top"
             android:text="Placeholder"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 </RelativeLayout>
