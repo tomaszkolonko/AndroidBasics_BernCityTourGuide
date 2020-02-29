@@ -30,9 +30,6 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
         public TextView restaurantNameView;
         public TextView restaurantAddressView;
 
-        // each data item is just a string in this case
-        public TextView textView;
-
         public ViewHolder(View itemView) {
             super(itemView);
 
@@ -47,6 +44,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
+        // View restaurantView = inflater.inflate(R.layout.restaurant_list_element, parent, false);
         View restaurantView = inflater.inflate(R.layout.restaurant_list_element, parent, false);
 
         // Return a new ViewHolder

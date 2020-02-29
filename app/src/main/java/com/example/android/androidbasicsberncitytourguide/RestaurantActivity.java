@@ -18,7 +18,8 @@ public class RestaurantActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_category);
 
-        //**
+        // I guess this is not the right place to initialize everything but
+        // that it rather should be done inside the RestaurantFragment.
 
 //        RecyclerView recyclerView = findViewById(R.id.restaurant_recycler_view);
 //        restaurants = Restaurant.createRestaurantList();
@@ -29,8 +30,9 @@ public class RestaurantActivity extends AppCompatActivity {
         //**
 
 
+
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, new RestaurantFragment(this))
+                .replace(R.id.container, new RestaurantFragment())
                 .commit();
     }
 }

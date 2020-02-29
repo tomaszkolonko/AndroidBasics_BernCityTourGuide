@@ -27,16 +27,9 @@ import java.util.ArrayList;
 public class RestaurantFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private Context activityContext;
-    private RecyclerView recyclerView;
 
     public RestaurantFragment() {
         // Required empty public constructor
-    }
-
-    public RestaurantFragment(Context context) {
-        this.activityContext = context;
-        // this.recyclerView = recyclerView;
     }
 
     /**
@@ -66,14 +59,19 @@ public class RestaurantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.restaurant_list_container, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_restaurant, container, false);
+
+        // This does not work...
+        //View rootView = inflater.inflate(R.layout.restaurant_list_container, container, false);
 
         ArrayList<Restaurant> restaurants = Restaurant.createRestaurantList();
         RestaurantAdapter adapter = new RestaurantAdapter(restaurants);
 
         RecyclerView rec = rootView.findViewById(R.id.restaurant_list_container);
         rec.setAdapter(adapter);
+        rec.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
 
+        // return rec;
         return rootView;
     }
 
