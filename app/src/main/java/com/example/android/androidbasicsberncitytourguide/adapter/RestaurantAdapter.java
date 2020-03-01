@@ -1,16 +1,14 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
-
+import com.example.android.androidbasicsberncitytourguide.R;
+import com.example.android.androidbasicsberncitytourguide.model.Restaurant;
 import java.util.List;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.ViewHolder> {

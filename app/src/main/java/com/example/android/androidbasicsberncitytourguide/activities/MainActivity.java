@@ -1,11 +1,10 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
+import com.example.android.androidbasicsberncitytourguide.adapter.CategoryFragmentAdapter;
+import com.example.android.androidbasicsberncitytourguide.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +21,5 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager(), this);
 
         viewPager.setAdapter(adapter);
-
-//
-//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-//
-//        tabLayout.setupWithViewPager(viewPager);
     }
 }

@@ -1,18 +1,16 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.fragments;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import com.example.android.androidbasicsberncitytourguide.R;
+import com.example.android.androidbasicsberncitytourguide.model.Restaurant;
+import com.example.android.androidbasicsberncitytourguide.adapter.RestaurantAdapter;
 import java.util.ArrayList;
 
 
@@ -51,8 +49,6 @@ public class RestaurantFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // setContentView(R.layout.fragment_restaurant);
     }
 
     @Override
@@ -61,9 +57,6 @@ public class RestaurantFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_restaurant, container, false);
 
-        // This does not work...
-        //View rootView = inflater.inflate(R.layout.restaurant_list_container, container, false);
-
         ArrayList<Restaurant> restaurants = Restaurant.createRestaurantList();
         RestaurantAdapter adapter = new RestaurantAdapter(restaurants);
 
@@ -71,7 +64,6 @@ public class RestaurantFragment extends Fragment {
         rec.setAdapter(adapter);
         rec.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
 
-        // return rec;
         return rootView;
     }
 
@@ -86,7 +78,6 @@ public class RestaurantFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

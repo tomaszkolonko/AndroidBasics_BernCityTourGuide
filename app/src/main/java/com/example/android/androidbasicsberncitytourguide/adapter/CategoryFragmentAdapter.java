@@ -1,10 +1,12 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.adapter;
 
 import android.content.Context;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import com.example.android.androidbasicsberncitytourguide.fragments.CityFragment;
+import com.example.android.androidbasicsberncitytourguide.fragments.ClubbingFragment;
+import com.example.android.androidbasicsberncitytourguide.fragments.RestaurantFragment;
 
 public class CategoryFragmentAdapter extends FragmentPagerAdapter {
 

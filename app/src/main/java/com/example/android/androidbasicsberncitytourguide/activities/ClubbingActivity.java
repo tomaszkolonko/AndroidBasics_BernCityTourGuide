@@ -1,8 +1,9 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.activities;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.android.androidbasicsberncitytourguide.fragments.ClubbingFragment;
+import com.example.android.androidbasicsberncitytourguide.R;
 
 public class ClubbingActivity extends AppCompatActivity {
     @Override

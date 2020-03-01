@@ -1,5 +1,6 @@
-package com.example.android.androidbasicsberncitytourguide;
+package com.example.android.androidbasicsberncitytourguide.model;
 
+import com.example.android.androidbasicsberncitytourguide.R;
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -15,8 +16,6 @@ public class Restaurant {
         this.phone = phone;
         this.email = email;
         this.imageResource = imageResource;
-
-        //this.imageResource = imageResource;
     }
 
     public String getName() {
@@ -78,8 +77,6 @@ public class Restaurant {
                 "041 458 65 37", "info@rest.ch", R.drawable.restaurant_five));
         restaurants.add(new Restaurant("Restaurant Six", "Winkelriedstrass 200",
                 "041 159 23 99", "info@rest.ch", R.drawable.restaurant_six));
-
-
 
         return restaurants;
     }
