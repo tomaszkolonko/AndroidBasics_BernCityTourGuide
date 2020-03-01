@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import com.example.android.androidbasicsberncitytourguide.adapter.CategoryFragmentAdapter;
 import com.example.android.androidbasicsberncitytourguide.R;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager viewPager = findViewById(R.id.viewpager);
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+
+        tabLayout.setupWithViewPager(viewPager);
 
         CategoryFragmentAdapter adapter = new CategoryFragmentAdapter(
                 getSupportFragmentManager(), this);
