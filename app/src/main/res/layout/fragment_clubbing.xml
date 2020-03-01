@@ -73,7 +73,7 @@
             android:layout_marginTop="@dimen/padding_extra"
             android:layout_marginBottom="@dimen/padding_extra"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:text="Play Sound" />
+            android:text="Play Sound Sample" />
 
     </LinearLayout>
 </ScrollView>
