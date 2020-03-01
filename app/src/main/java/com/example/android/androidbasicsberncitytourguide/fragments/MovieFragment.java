@@ -9,24 +9,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.android.androidbasicsberncitytourguide.R;
-import com.example.android.androidbasicsberncitytourguide.model.Restaurant;
-import com.example.android.androidbasicsberncitytourguide.adapter.RestaurantAdapter;
-import java.util.ArrayList;
+import com.example.android.androidbasicsberncitytourguide.adapter.MovieAdapter;
+import com.example.android.androidbasicsberncitytourguide.model.Movie;
 
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RestaurantFragment.OnFragmentInteractionListener} interface
+ * {@link MovieFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RestaurantFragment#newInstance} factory method to
+ * Use the {@link MovieFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RestaurantFragment extends Fragment {
+public class MovieFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public RestaurantFragment() {
+    public MovieFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class RestaurantFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RestaurantFragment.
+     * @return A new instance of fragment MovieFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RestaurantFragment newInstance(String param1, String param2) {
-        RestaurantFragment fragment = new RestaurantFragment();
+    public static MovieFragment newInstance(String param1, String param2) {
+        MovieFragment fragment = new MovieFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -55,12 +55,12 @@ public class RestaurantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_restaurant, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_movie, container, false);
 
-        ArrayList<Restaurant> restaurants = Restaurant.createRestaurantList();
-        RestaurantAdapter adapter = new RestaurantAdapter(restaurants);
+        ArrayList<Movie> movies = Movie.createMovieList();
+        MovieAdapter adapter = new MovieAdapter(movies);
 
-        RecyclerView rec = rootView.findViewById(R.id.restaurant_recycler_view);
+        RecyclerView rec = rootView.findViewById(R.id.movie_recylcer_view);
         rec.setAdapter(adapter);
         rec.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
 

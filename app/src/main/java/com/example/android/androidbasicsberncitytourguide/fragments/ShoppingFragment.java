@@ -9,24 +9,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.android.androidbasicsberncitytourguide.R;
-import com.example.android.androidbasicsberncitytourguide.model.Restaurant;
-import com.example.android.androidbasicsberncitytourguide.adapter.RestaurantAdapter;
-import java.util.ArrayList;
+import com.example.android.androidbasicsberncitytourguide.adapter.ShoppingCenterAdapter;
+import com.example.android.androidbasicsberncitytourguide.model.ShoppingCenter;
 
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RestaurantFragment.OnFragmentInteractionListener} interface
+ * {@link ShoppingFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RestaurantFragment#newInstance} factory method to
+ * Use the {@link ShoppingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RestaurantFragment extends Fragment {
+public class ShoppingFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public RestaurantFragment() {
+    public ShoppingFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class RestaurantFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RestaurantFragment.
+     * @return A new instance of fragment ShoppingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RestaurantFragment newInstance(String param1, String param2) {
-        RestaurantFragment fragment = new RestaurantFragment();
+    public static ShoppingFragment newInstance(String param1, String param2) {
+        ShoppingFragment fragment = new ShoppingFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -55,12 +55,12 @@ public class RestaurantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_restaurant, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_shopping, container, false);
 
-        ArrayList<Restaurant> restaurants = Restaurant.createRestaurantList();
-        RestaurantAdapter adapter = new RestaurantAdapter(restaurants);
+        ArrayList<ShoppingCenter> shoppingCenters = ShoppingCenter.createShoppingCenterList();
+        ShoppingCenterAdapter adapter = new ShoppingCenterAdapter(shoppingCenters);
 
-        RecyclerView rec = rootView.findViewById(R.id.restaurant_recycler_view);
+        RecyclerView rec = rootView.findViewById(R.id.shopping_recycler_view);
         rec.setAdapter(adapter);
         rec.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
 

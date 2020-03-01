@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shoppingcenter_list_element"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:paddingBottom="40dp">
+
+    <ImageView
+        android:id="@+id/shoppingcenter_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="3" />
+
+    <TextView
+        android:id="@+id/shoppingcenter_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="@dimen/padding_standard"
+        android:text="Placeholder"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/shoppingcenter_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingcenter_image"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/shoppingcenter_address"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Placeholder"
+        android:paddingLeft="@dimen/padding_standard"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/shoppingcenter_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingcenter_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/shoppingcenter_phone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Placeholder"
+        android:paddingLeft="@dimen/padding_standard"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shoppingcenter_address"
+        app:layout_constraintVertical_bias="0.196"
+        app:layout_constraintVertical_weight="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

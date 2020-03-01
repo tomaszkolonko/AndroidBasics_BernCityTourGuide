@@ -6,11 +6,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.android.androidbasicsberncitytourguide.fragments.CityFragment;
 import com.example.android.androidbasicsberncitytourguide.fragments.ClubbingFragment;
+import com.example.android.androidbasicsberncitytourguide.fragments.MovieFragment;
 import com.example.android.androidbasicsberncitytourguide.fragments.RestaurantFragment;
+import com.example.android.androidbasicsberncitytourguide.fragments.ShoppingFragment;
 
 public class CategoryFragmentAdapter extends FragmentPagerAdapter {
 
-    private final int NUMBER_OF_TABS = 3;
+    private final int NUMBER_OF_TABS = 5;
     private Context mContext;
 
     public CategoryFragmentAdapter(FragmentManager fm, Context context) {
@@ -24,6 +26,10 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
             return new CityFragment();
         } else if(position == 1) {
             return new RestaurantFragment();
+        } else if(position == 2) {
+            return new MovieFragment();
+        } else if(position == 3) {
+            return new ShoppingFragment();
         } else {
             return new ClubbingFragment();
         }
@@ -39,9 +45,13 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
         if(position == 0) {
             return "City";
         } else if(position == 1) {
-            return "Restaurants";
+            return "Food";
+        } else if(position == 2) {
+            return "Movies";
+        } else if(position == 3) {
+            return "Shop";
         } else {
-            return "Clubbing";
+            return "Club";
         }
     }
 }
