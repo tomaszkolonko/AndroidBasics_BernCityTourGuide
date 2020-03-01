@@ -6,11 +6,8 @@ import com.example.android.androidbasicsberncitytourguide.R;
 import com.example.android.androidbasicsberncitytourguide.model.Restaurant;
 import com.example.android.androidbasicsberncitytourguide.fragments.RestaurantFragment;
 
-import java.util.ArrayList;
 
 public class RestaurantActivity extends AppCompatActivity {
-
-    ArrayList<Restaurant> restaurants;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

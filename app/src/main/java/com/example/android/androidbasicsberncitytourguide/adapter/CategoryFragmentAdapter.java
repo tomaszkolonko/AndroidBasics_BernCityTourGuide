@@ -4,6 +4,8 @@ import android.content.Context;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.android.androidbasicsberncitytourguide.R;
 import com.example.android.androidbasicsberncitytourguide.fragments.CityFragment;
 import com.example.android.androidbasicsberncitytourguide.fragments.ClubbingFragment;
 import com.example.android.androidbasicsberncitytourguide.fragments.MovieFragment;
@@ -29,7 +31,7 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
         } else if(position == 2) {
             return new MovieFragment();
         } else if(position == 3) {
-            return new ShoppingFragment();
+            return new ShoppingFragment(mContext);
         } else {
             return new ClubbingFragment();
         }
@@ -43,15 +45,15 @@ public class CategoryFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if(position == 0) {
-            return "City";
+            return mContext.getResources().getString(R.string.layouttab_city);
         } else if(position == 1) {
-            return "Food";
+            return mContext.getResources().getString(R.string.layouttab_food);
         } else if(position == 2) {
-            return "Movies";
+            return mContext.getResources().getString(R.string.layouttab_movies);
         } else if(position == 3) {
-            return "Shop";
+            return mContext.getResources().getString(R.string.layouttab_shop);
         } else {
-            return "Club";
+            return mContext.getResources().getString(R.string.layouttab_club);
         }
     }
 }

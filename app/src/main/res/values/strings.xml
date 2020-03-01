@@ -17,4 +17,37 @@
     <string name="intro_dutheatre">This venue is good for rather young people that like lots of different kind of music from hiphop to salsa. It is located in the center of the old town.</string>
     <string name="intro_leciel">This venue is good for rather young people that like lots of different kind of music from hiphop to salsa. It is located next to the famous Reitschule</string>
 
+    <string name="released_mediaplayer_toast">Released MediaPlayer</string>
+
+    <string name="layouttab_city">City</string>
+    <string name="layouttab_food">Food</string>
+    <string name="layouttab_movies">Movies</string>
+    <string name="layouttab_shop">Shop</string>
+    <string name="layouttab_club">Club</string>
+
+    <!-- Shopping Center Variables ((although I really doubt that is a good practise)) -->
+    <string name="sc_one_name">ShoppingCenter One</string>
+    <string name="sc_two_name">ShoppingCenter Two</string>
+    <string name="sc_three_name">ShoppingCenter Three</string>
+    <string name="sc_four_name">ShoppingCenter Four</string>
+    <string name="sc_five_name">ShoppingCenter Five</string>
+    <string name="sc_six_name">ShoppingCenter Six</string>
+
+    <string name="sc_one_address">Lerchenhalde 534</string>
+    <string name="sc_two_address">Brungasse 4</string>
+    <string name="sc_three_address">Helmutrain 53</string>
+    <string name="sc_four_address">Kramergasse 22</string>
+    <string name="sc_five_address">Wankdorfstrasse 11</string>
+    <string name="sc_six_address">Winkelriedstrass 236</string>
+
+    <string name="sc_one_phone">043 654 48 12</string>
+    <string name="sc_two_phone">043 789 65 99</string>
+    <string name="sc_three_phone">043 155 26 14</string>
+    <string name="sc_four_phone">043 269 58 47</string>
+    <string name="sc_five_phone">043 789 45 12</string>
+    <string name="sc_six_phone">043 984 65 32</string>
+
+
+
+
 </resources>

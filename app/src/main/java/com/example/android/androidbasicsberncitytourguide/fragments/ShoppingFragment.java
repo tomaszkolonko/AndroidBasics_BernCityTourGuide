@@ -1,5 +1,6 @@
 package com.example.android.androidbasicsberncitytourguide.fragments;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.android.androidbasicsberncitytourguide.R;
+import com.example.android.androidbasicsberncitytourguide.activities.MainActivity;
 import com.example.android.androidbasicsberncitytourguide.adapter.ShoppingCenterAdapter;
 import com.example.android.androidbasicsberncitytourguide.model.ShoppingCenter;
 
@@ -25,10 +27,12 @@ import java.util.ArrayList;
 public class ShoppingFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private static Context mContext;
 
-    public ShoppingFragment() {
-        // Required empty public constructor
+    public ShoppingFragment(Context context) {
+        this.mContext = context;
     }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -40,7 +44,7 @@ public class ShoppingFragment extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static ShoppingFragment newInstance(String param1, String param2) {
-        ShoppingFragment fragment = new ShoppingFragment();
+        ShoppingFragment fragment = new ShoppingFragment(mContext);
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -57,7 +61,7 @@ public class ShoppingFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_shopping, container, false);
 
-        ArrayList<ShoppingCenter> shoppingCenters = ShoppingCenter.createShoppingCenterList();
+        ArrayList<ShoppingCenter> shoppingCenters = ShoppingCenter.createShoppingCenterList(mContext);
         ShoppingCenterAdapter adapter = new ShoppingCenterAdapter(shoppingCenters);
 
         RecyclerView rec = rootView.findViewById(R.id.shopping_recycler_view);

@@ -219,7 +219,7 @@ public class ClubbingFragment extends Fragment {
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
 
             // Show simple Toast message (dev only)
-            Toast.makeText(getActivity(), "Released MediaPlayer",
+            Toast.makeText(getActivity(), getString(R.string.released_mediaplayer_toast),
                     Toast.LENGTH_SHORT).show();
         }
     }
